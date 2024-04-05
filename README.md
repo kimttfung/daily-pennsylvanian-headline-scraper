@@ -104,6 +104,16 @@ You can then run the script to try it out with:
 pipenv run python script.py
 ```
 
+## Scraper Modifications
+
+I chose to navigate to the DP's [Multimedia page](https://www.thedp.com/multimedia) and scrape the headline of the latest video or photo story.
+
+To do so, I updated the `requests.get()` function to take in `https://www.thedp.com/multimedia` as its argument.
+
+Then, I used the "Inspect" feature of the browser and saw that the headline was in a link tag with the class name `"medium-link"`.
+
+Thus, I updated the `soup.find()` function to take `"class_="medium-link"` as one of its arguments.
+
 ## Licensing
 
 This software is distributed under the terms of the MIT License. You have the freedom to use, modify, distribute, and sell it for any purpose. However, you must include the original copyright notice and the permission notice found in the LICENSE file in all copies or substantial portions of the software.
